@@ -1,4 +1,4 @@
-#CATXbit
+## CATXbit
 
 CATXbit é um site voltado para visualização de imagens e gifs de gatos, com galeria interativa e sistema completo de comentários (CRUD).
 
