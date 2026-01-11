@@ -1,0 +1,926 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------- navbar menu ------------------------------- */
+.navbar {
+    background-image: linear-gradient(to top, #020913 0%, #00101b 100%);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    /* mantem a navbar ali mesmo scrollando */
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    /* distribui o espaço entre itens */
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar_logo {
+    background: #ED213A;
+    background: -webkit-linear-gradient(to right, #a72618, #ED213A);
+    background: linear-gradient(to right, #bb3627, #ED213A);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    /* ajuda o chrome mostrar o gradient */
+    -moz-background-clip: text;
+    /* ajuda o firefox mostrar o gradient */
+    -webkit-text-fill-color: transparent;
+    /* faz o texto ficar transparente e mostrar o gradient atras */
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar_item {
+    height: 80px;
+}
+
+.navbar_links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #ED213A;
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    background: linear-gradient(to right, #93291E, #ED213A);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.navbar_links:hover {
+    color: #ED213A;
+    transition: all 0.3s ease;
+}
+
+/* ------------------ Seção do Hero (primeiro bloco da pagina) ------------------ */
+.hero {
+    background-image: linear-gradient(to top, #020913 0%, #00101b 100%);
+    padding: 200px 0;
+}
+
+.hero_container {
+    /* alinhando o bloco hero */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.hero_heading {
+    font-size: 100px;
+    margin-bottom: 24px;
+    color: #fff;
+}
+
+.hero_heading span {
+    background: #ED213A;
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    background: linear-gradient(to right, #93291E, #ED213A);
+    background-size: 100%;
+    /* deixando a cor no texto em destaque: */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -mo-text-fill-color: transparent;
+}
+
+.hero_description {
+    /* descricao em baixo do texto */
+    font-size: 25px;
+    background: #CB356B;
+    background: -webkit-linear-gradient(to right, #BD3F32, #CB356B);
+    background: linear-gradient(to right, #BD3F32, #CB356B);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.highlight {
+    /* efeito pra navegação da navbar */
+    border-bottom: 4px solid rgb(132, 0, 255);
+}
+
+
+/* ------------------------------- Gallery section ------------------------------- */
+
+.gallery {
+    background-image: linear-gradient(to top, #020913 0%, #00101b 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+}
+
+.gallery h1 {
+    background: #ED213A;
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    background: linear-gradient(to right, #93291E, #ED213A);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+}
+
+.gallery h3 {
+    background: #ED213A;
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    background: linear-gradient(to right, #93291E, #ED213A);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 5rem;
+    padding-top: 50px;
+    font-size: 1.5rem;
+}
+
+.gallery_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.gallery_card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin: 10px;
+    height: 345px;
+    width: 375px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    background-image: linear-gradient(to top, #072348 0%, #00101b 100%);
+}
+
+.gallery_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery_card::after {
+    content: "Clique para ver mais um gato!";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(237, 33, 58, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.gallery_card:hover::after {
+    opacity: 1;
+}
+
+.gallery_card img {
+    width: 100%;
+    height: 345px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ------------------------------- Modal Section ------------------------------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    position: relative;
+    margin: 2% auto; 
+    width: 95%;
+    max-width: 900px; 
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 0.3s ease-out;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001;
+}
+
+.close-modal:hover {
+    color: #ed213a;
+}
+
+.modal-body {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e293b;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    min-height: 400px;
+}
+
+#modalGif {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain;
+    border-radius: 8px;
+    display: none;
+}
+
+.modal-loading {
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+/* Animações abrindo o modal */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------- Facts Section ------------------------------- */
+.main {
+    background-image: linear-gradient(to top, #020913 0%, #00101b 100%);
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+}
+
+.facts_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+    max-width: 1400px;
+    gap: 60px;
+}
+
+.main_content {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    margin-top: -30px;
+}
+
+.main_content h1 {
+    font-size: 1.8rem;
+    color: #e2e8f0;
+    margin-bottom: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 9px;
+}
+
+.main_content h2 {
+    font-size: 3.5rem;
+    background: #ED213A;
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);
+    background: linear-gradient(to right, #93291E, #ED213A);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.main_content p {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.main_img--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.main_img--container img {
+    width: 100%;
+    max-width: 650px;
+    max-height: 550px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(237, 33, 58, 0.2);
+    object-fit: cover;
+}
+
+.main_img--container img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Efeito de brilho na imagem */
+.main_img--container {
+    position: relative;
+}
+
+.main_img--container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 110%;
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.main_img--container:hover::before {
+    opacity: 1;
+}
+
+/* Animação de entrada */
+.facts_container {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------- About Section ------------------------------- */
+
+.about {
+    background-image: linear-gradient(to top, #020913 0%, #00101b 100%);
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.about_container {
+    background: linear-gradient(135deg, #072348 0%, #00101b 100%);
+    border-radius: 20px;
+    padding: 50px 40px;
+    max-width: 700px;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(237, 33, 58, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px; /* Altura mínima reduzida */
+}
+
+.about_container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, #93291E, #ED213A);
+}
+
+.about_container h1 {
+    font-size: 3rem;
+    background: linear-gradient(to right, #93291E, #ED213A);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.about_container h1 .paw {
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background: none;
+}
+
+.about_container h2 {
+    font-size: 1.6rem;
+    color: #e2e8f0;
+    text-align: center;
+    line-height: 1.6;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Efeitos de hover na caixa */
+.about_container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about_container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+.about_container {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* ------------------------------- Comment section layout ------------------------------- */
+
+.comment-section {
+    background-image: linear-gradient(to top, #020913 0%, #00101b 100%);
+    min-height: 100vh;
+}
+
+.comment-section h1 {
+  text-align: center;
+  background: linear-gradient(to right, #93291E, #961423);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.comment-section h1 .paw {
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background: none;
+}
+
+/* estilo para erro login */
+.error-message {
+    color: #ED213A;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 10px 20px;
+    background: rgba(237, 33, 58, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #ED213A;
+    max-width: 500px;
+    display: block;
+}
+
+form {
+    align-items: center;
+    gap: 15px;
+}
+
+.comment-section input,
+.comment-section textarea {
+    border: none;
+    border-radius: 8px;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    align-items: center;
+    width: 530px;
+    height: 100px;
+}
+
+button {
+    background: linear-gradient(to right, #611b13, #860413);
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    transform: scale(1.01);
+}
+
+/* -------------------------- Comment Received Section -------------------------- */
+.comment-received {
+    background-image: linear-gradient(to top, #020913 0%, #00101b 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.received-container {
+    background: linear-gradient(135deg, #072348 0%, #00101b 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(237, 33, 58, 0.1);
+    overflow: hidden;
+    margin-bottom: 150px;
+    position: relative;
+    overflow: visible;
+}
+
+.received-container h1 {
+    background: linear-gradient(to right, #aa2b1d, #990012);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.received-container h1 .paw {
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background: none;
+}
+
+.received-container h2 {
+    font-size: 1.5rem;
+    color: #cedae6;
+    margin-bottom: 1.3rem;
+}
+
+.comment-display {
+    margin: 2rem 0;
+}
+
+.comment-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px 20px;
+    border-left: 4px solid #b30216;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.comment-card h3 {
+    color: #ED213A;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.comment-card p {
+    color: #e2e8f0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.received-container p {
+    color: #e2e8f0;
+    font-size: 1.1rem;
+}
+
+.received-container span {
+    color: #ED213A;
+    font-weight: bold;
+}
+
+.data-comentario {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-style: italic;
+    border-top: 1px solid rgba(237, 33, 58, 0.2);
+    padding-top: 0.5rem;
+}
+
+.botao-voltar {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.botao-voltar .botao {
+    background: linear-gradient(135deg, #ac3123 0%, #ae1829 100%);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.botao-voltar .botao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(237, 33, 58, 0.3);
+}
+
+/* ------------------------------- CRUD actions ------------------------------- */
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-edit, .btn-delete {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-edit:hover {
+    transform: scale(1.1);
+}
+
+.btn-delete:hover {
+    transform: scale(1.1);
+}
+
+.btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+/* cor dos icones de edit e delete */
+.btn-edit .icon,
+.btn-delete .icon {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(320deg) brightness(1.2);
+}
+
+
+/* Ajuste para quando adicionar os SVGs */
+.btn-edit svg,
+.btn-delete svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Ajuste no comment-card para os botões */
+.comment-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px 20px;
+    border-left: 4px solid #ED213A;
+    text-align: left;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.comment-card h3 {
+    color: #ED213A;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+/* ------------------------------- login e registro ------------------------------- */
+
+.login-form, .register-form {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 550px;
+    border: 1px solid rgba(237, 33, 58, 0.2);
+}
+
+.login-form h2, .register-form h2{
+    color: #e9dadc;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.login-form form, .register-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comment-form {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.comment-form h2 {
+    color: #e9dadc;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.comment-section input {
+    border: none;
+    border-radius: 8px;
+    background: #1e293b;
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    align-items: center;
+    width: 450px;
+    height: 55px;
+}
+
+.logout-section {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn {
+    background: linear-gradient(to right, #611b13, #860413);
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+}
+
+.logout-btn:hover {
+    transform: scale(1.01);
+}
+
+/* ------------------------------- forms inline ------------------------------- */
+.comment-actions form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.form-buttons button,
+.form-buttons .botao {
+    padding: 0.8rem 1.5rem;
+}
